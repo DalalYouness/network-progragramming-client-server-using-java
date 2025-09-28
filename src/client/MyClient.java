@@ -28,6 +28,7 @@ public class MyClient {
         System.out.println("i will wait for the server response");
         int response = in.read();
         System.out.println("server response is " + response);
+        socket.close();
 
 
     }
