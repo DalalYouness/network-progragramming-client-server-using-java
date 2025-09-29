@@ -10,7 +10,7 @@ public class MyServer {
     public static void main(String[] args) throws IOException {
 
         ServerSocket serverSocket = new ServerSocket(1234);
-        System.out.println("Server started on port 1234 and listening on port 1234");
+        System.out.println("waiting connection...");
         Socket socket = serverSocket.accept();
         InputStream inputStream = socket.getInputStream();
         OutputStream outputStream = socket.getOutputStream();

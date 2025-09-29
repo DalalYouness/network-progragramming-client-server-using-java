@@ -19,13 +19,13 @@ public class MyClient {
     }
 
     public static void main(String[] args) throws IOException {
-        System.out.println("i will connect to server");
+        //System.out.println("i will connect to server");
         Socket socket = new Socket("localhost",1234);
         InputStream in = socket.getInputStream();
         OutputStream out = socket.getOutputStream();
         int input = readNumberFromClient();
         out.write(input);
-        System.out.println("i will wait for the server response");
+        System.out.println("waiting for response...");
         int response = in.read();
         System.out.println("server response is " + response);
         socket.close();
