@@ -12,6 +12,7 @@ public class MyServer {
         ServerSocket serverSocket = new ServerSocket(1234);
         System.out.println("waiting connection...");
         Socket socket = serverSocket.accept();
+        System.out.println("client connected to: " + socket.getRemoteSocketAddress());
         InputStream inputStream = socket.getInputStream();
         OutputStream outputStream = socket.getOutputStream();
         System.out.println("Client connected to server , waiting data from client");
